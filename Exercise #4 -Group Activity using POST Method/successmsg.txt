@@ -1,0 +1,35 @@
+<?php
+$username = isset($_GET['user']) ? htmlspecialchars($_GET['user']) : 'Unknown';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Success</title>
+  <style>
+    body {
+      margin: 0; 
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url(blackk.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      font-family: Arial, sans-serif;
+      flex-direction: column;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: underline;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Successful!</h2>
+  <p><strong>Username:</strong> <?php echo $username; ?></p>
+  <p><a href="index.php">Back to Team Page</a></p>
+</body>
+</html>

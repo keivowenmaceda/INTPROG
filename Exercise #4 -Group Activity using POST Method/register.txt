@@ -1,0 +1,101 @@
+<?php
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
+
+    $_SESSION['user'] = [
+        'username' => $username,
+        'password' => $password
+    ];
+    header("Location: success.php?user=$username");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <style>
+    body {
+      background: url(blackk.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      color: #fff;
+      text-align: center;
+    }
+    form {
+      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #fff;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      background-color: #000;
+      color: #fff;
+    }
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #bbb;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #ddd;
+    }
+    p {
+      text-align: center;
+      color: #fff;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h2>Register</h2>
+  <form method="POST" action="register.php">
+    <label>Username:</label><br>
+    <input type="text" name="username" required placeholder="Enter username"><br>
+    <label>Password:</label><br>
+    <input type="password" name="password" required placeholder="Enter password"><br>
+    <button type="submit">Register</button>
+  </form>
+  <p>Already registered?<a href="login.php">Login here</a></p>
+</body>
+</html>
