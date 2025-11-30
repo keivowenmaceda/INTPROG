@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('daycare wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcccb;
+    padding: 10px 20px;
+}
+
+nav .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hover for all nav links */
+nav ul li a:hover {
+    color: #fff;
+    background-color: #ff9999;
+}
+
+/* Specific hover for About */
+nav ul li a[href="#about"]:hover {
+    background-color: #87ceeb;
+    color: #000;
+}
+
+/* Specific hover for Programs */
+nav ul li a[href="#programs"]:hover {
+    background-color: #98fb98;
+    color: #000;
+}
+
+/* Specific hover for Enrollment */
+nav ul li a[href="#enrollment"]:hover {
+    background-color: #ffff99;
+    color: #000;
+}
+
+/* Specific hover for Contact */
+nav ul li a[href="#contact"]:hover {
+    background-color: #dda0dd;
+    color: #000;
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Specific styles for Home section */
+#home {
+    background: linear-gradient(to bottom, #e6f7ff, #cceeff);
+    border-radius: 15px;
+    border: 2px solid #b3d9ff;
+    margin: 20px auto;
+    padding: 60px 20px; /* Extra padding for emphasis */
+}
+
+#home h1 {
+    font-size: 2.5rem; /* Larger heading */
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 1.1rem; /* Slightly larger text */
+}
+
+/* Specific styles for About Us section */
+#about {
+    background: linear-gradient(to bottom, #e6f7ff, #cceeff);
+    border: 2px solid #b3d9ff;
+    border-radius: 10px; /* Rounded corners */
+    padding: 50px 20px;
+    margin: 20px auto;
+    text-align: left; /* Left-align text for a more informative feel */
+}
+
+#about h2 {
+    text-align: center; /* Keep heading centered */
+    color: #0066cc;
+}
+
+#about ul {
+    text-align: left;
+    margin: 20px 0;
+}
+
+/* Specific styles for Our Programs section */
+#programs {
+    background: linear-gradient(to bottom, #e6f7ff, #cceeff); /* Soft blue gradient background */
+    border: 1px solid #b3d9ff; /* Light blue border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 50px 20px;
+    margin: 20px auto;
+    text-align: center; /* Centered text */
+}
+
+#programs h2 {
+    color: #0066cc; /* Darker blue for heading */
+    margin-bottom: 20px;
+}
+
+#programs ul {
+    text-align: left; /* Left-align list for readability */
+    margin: 20px auto;
+    max-width: 600px; /* Constrain list width */
+}
+
+#programs li {
+    margin-bottom: 15px; /* Space between list items */
+    font-size: 1.05rem; /* Slightly larger text */
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ffcccb;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover all buttons */
+form button:hover, nav ul li a:hover {
+    background-color: #ff9999;
+    color: #fff;
+}
+
+/* Modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #ffcccb;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.switch-form {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}

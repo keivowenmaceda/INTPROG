@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Stars Daycare</title>
+    <link rel="icon" type="image/x-icon" href="Logo.png"> <!-- Added Favicon for browser tab -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navBar" style="display: none;"> <!-- Hidden until logged in -->
+        <div class="logo">Little Stars DayCare</div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#enrollment">Enrollment</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home" style="display: none;"> <!-- Hidden until logged in -->
+        <h1>Welcome to Little Stars Daycare</h1>
+        <p>We care, nurture, and guide your little stars in a loving, educational environment. Our daycare is dedicated to fostering creativity, curiosity, and growth in every child.</p>
+        <img src="playing.png" alt="Children playing at daycare" style="max-width: 100%; height: auto; margin: 20px 0;">
+        <p>At Little Stars, we believe in providing a safe space where children can explore, learn, and make friends. Our experienced staff ensures personalized attention for each child's unique needs.</p>
+        <p>Join our community and watch your child thrive!</p>
+    </section>
+
+    <section id="about" style="display: none;"> <!-- Hidden until logged in -->
+        <h2>About Us</h2>
+        <p>Little Stars Daycare has been a trusted name in early childhood education for over 10 years. We provide a safe, fun, and nurturing environment where children can learn and grow at their own pace.</p>
+        <img src="daycare classroom.png" alt="Daycare classroom" style="max-width: 100%; height: auto; margin: 20px 0;">
+        <p>Our mission is to inspire young minds through play-based learning, social interaction, and age-appropriate activities. We prioritize safety, creativity, and emotional development.</p>
+        <ul>
+            <li>Certified and experienced caregivers</li>
+            <li>Nutritious meals and snacks</li>
+            <li>Outdoor play areas and educational toys</li>
+            <li>Regular parent-teacher communication</li>
+        </ul>
+        <p>We are committed to creating a positive impact on every child's future.</p>
+    </section>
+
+    <section id="programs" style="display: none;"> <!-- Hidden until logged in -->
+        <h2>Our Programs</h2>
+        <p>Our tailored programs cater to different age groups, ensuring every child receives the right level of care and education.</p>
+        <img src="Children in activities.png" alt="Children in activities" style="max-width: 100%; height: auto; margin: 20px 0;">
+        <ul>
+            <li><strong>Preschool:</strong> Interactive learning for ages 2-5, including literacy, math basics, art, and group play to build social skills.</li>
+            <li><strong>After School Activities:</strong> Fun and educational programs for school aged kids, with homework help, sports, and creative workshops.</li>
+        </ul>
+        <p>All programs include daily routines, healthy meals, and opportunities for physical activity. We adapt to each child's interests and developmental stage.</p>
+        <p>Contact us to learn more about enrollment options!</p>
+    </section>
+
+    <section id="enrollment" style="display: none;"> <!-- Hidden until logged in -->
+        <h2>Enrollment</h2>
+        <p>Ready to enroll your child? Fill out the form below, and we'll get back to you.</p>
+        <form id="enrollmentForm">
+            <input type="text" id="parentName" placeholder="Parent's Name" required>
+            <input type="email" id="parentEmail" placeholder="Email" required>
+            <input type="text" id="childName" placeholder="Child's Name" required>
+            <input type="number" id="childAge" placeholder="Child's Age" required>
+            <button type="submit">Submit Enrollment</button>
+        </form>
+    </section>
+
+    <section id="contact" style="display: none;"> <!-- Hidden until logged in -->
+        <h2>Contact Us</h2>
+        <p>Email: info@littlestars.com | Phone: 123-456-7890</p>
+        <h3>Email Us</h3>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Email</button>
+        </form>
+    </section>
+
+    <!-- Login/Register Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="loginForm">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="loginSubmit">Login</button>
+                <p class="switch-form" id="toRegister">Don't have an account? Register</p>
+            </div>
+            <div id="registerForm" style="display:none;">
+                <h2>Register</h2>
+                <input type="text" id="regUsername" placeholder="Username">
+                <input type="password" id="regPassword" placeholder="Password">
+                <button id="registerSubmit">Register</button>
+                <p class="switch-form" id="toLogin">Already have an account? Login</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
